@@ -1,3 +1,5 @@
+// [shortUrl]/page.js
+
 import { redirect } from "next/navigation";
 import clientPromise from "@/lib/mongodb";
 export default async function Page({ params }) {

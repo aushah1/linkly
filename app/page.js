@@ -1,11 +1,6 @@
+// Page.js
 import Image from "next/image";
-import localFonts from "next/font/local";
 import Link from "next/link";
-// const poppins = localFonts({
-//   src: "./fonts/Poppins-ExtraBold.ttf",
-//   variable: "--Poppins-ExtraBold",
-//   weight: "100 900",
-// });
 
 export default function Home() {
   return (
