@@ -1,103 +1,105 @@
 import Image from "next/image";
+import localFonts from "next/font/local";
+import Link from "next/link";
+// const poppins = localFonts({
+//   src: "./fonts/Poppins-ExtraBold.ttf",
+//   variable: "--Poppins-ExtraBold",
+//   weight: "100 900",
+// });
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className=" text-white">
+      <section className="bg-gradient-to-b from-zinc-800 to-zinc-900 grid grid-cols-2 h-[70vh]">
+        <div className="flex flex-col gap-7  justify-center px-10">
+          <h1 className={`lg:text-6xl text-4xl font-semibold `}>
+            Shrink your links. Amplify your reach.
+          </h1>
+          <p className="">
+            Welcome to our URL Shortener! Simplify your links and boost your
+            online presence with our intutive platform.
+          </p>
+          <div className="button  ">
+            <Link href="/generate">
+              <button className="bg-white text-black shadow-lg rounded-full py-2 px-7">
+                Generate
+              </button>
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="second relative ">
+          <div className="img absolute bottom-0 right-0 w-96 lg:w-[34rem] ">
+            <Image
+              src={"/triangle.png"}
+              height={700}
+              width={700}
+              alt="triangle"
+            />
+          </div>
+          <div className="circle absolute bottom-30 z-10 right-[30%] bg-white h-64 w-64 lg:h-72 lg:w-72 rounded-full"></div>
+          <div className="circle absolute bottom-16 right-[18%] bg-black h-52 w-52 lg:h-60 lg:w-60 rounded-full"></div>
+          <div className="circle absolute bottom-4 z-10 right-[4%] bg-white h-20 w-20 lg:h-28 lg:w-28 rounded-full"></div>
+          {/* <div className="circle absolute flex items-end text-black justify-center  -bottom-32 right-[60%] bg-transparent border border-black h-48 w-48 lg:h-56 lg:w-56 rounded-full">
+            {" "}
+            TEXT
+          </div> */}
+        </div>
+      </section>
+      <section className="grid lg:grid-cols-3 grid-cols-2 lg:px-40 px-10 gap-6 my-32">
+        <div className="box flex flex-col justify-center gap-5 text-black border border-gray-200 p-5 rounded-lg shadow-sm">
+          <h3 className="font-semibold text-2xl">Streamlined URL</h3>
+          <p className="text-gray-700">
+            Say goodbye to long unmanageable links. Our URL shortener makes it
+            easy to create custom , memorable short URLs that pack a punch.
+          </p>
+        </div>
+        <div className="box flex flex-col justify-center gap-5 text-black border border-gray-200 p-5 rounded-lg shadow-sm">
+          <h3 className="font-semibold text-2xl">Customize with Ease</h3>
+          <p className="text-gray-700">
+            Personalize your short URLs to match your brand preference. Our
+            Intuitive interface empowers you to take control of your online
+            identity.
+          </p>
+        </div>
+        <div className="box flex flex-col justify-center gap-5 text-black border border-gray-200 p-5 rounded-lg shadow-sm">
+          <h3 className="font-semibold text-2xl">Shortened URLs</h3>
+          <p className="text-gray-700">
+            Elevate your digital presence with our powerful URL shortening tool
+            transform long, cumbersome links into concise, shareable assets that
+            leave a lasting
+          </p>
+        </div>
+      </section>
+      <section className="bg-gradient-to-b from-zinc-800 to-zinc-900 grid grid-cols-2 h-[56vh]">
+        <div className="flex flex-col gap-7  justify-center px-10">
+          <h1 className={`lg:text-6xl text-4xl font-semibold  `}>
+            Unleash the
+          </h1>
+          <p className="">
+            We are the most straightforward URL Shortener in the world. Most{" "}
+          </p>
+          <div className="button  ">
+            <Link href="/generate">
+              <button className="bg-white text-black shadow-lg rounded-full py-2 px-7">
+                Shorten it
+              </button>
+            </Link>
+          </div>
+        </div>
+        <div className="second relative ">
+          <div className="img absolute bottom-0 right-0 w-96 lg:w-[28rem] ">
+            <Image
+              src={"/triangle.png"}
+              height={700}
+              width={700}
+              alt="triangle"
+            />
+          </div>
+          <div className="circle absolute bottom-10 right-[26%] bg-white h-64 w-64 lg:h-72 lg:w-72 rounded-full"></div>
+          <div className="circle absolute bottom-30 z-10 right-[19%] bg-black h-52 w-52 lg:h-60 lg:w-60 rounded-full"></div>
+          {/* <div className="circle absolute bottom-64 z-10 right-[14%] border-2 border-white h-28 w-28 lg:h-28 lg:w-28 rounded-full"></div> */}
+        </div>
+      </section>
+    </main>
   );
 }
